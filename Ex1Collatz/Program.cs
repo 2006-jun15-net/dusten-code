@@ -2,7 +2,7 @@
 
 namespace Ex1Collatz {
     class Program {
-        void Collatz (int n) {
+        void Collatz (uint n) {
 
             Console.WriteLine (n);
 
@@ -24,7 +24,7 @@ namespace Ex1Collatz {
         static void Main (string[] args) {
 
             var prog = new Program ();
-            prog.Collatz (int.Parse (args[0]));
+            prog.Collatz (uint.Parse (args[0]));
         }
     }
 }

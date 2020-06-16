@@ -4,19 +4,19 @@ namespace Staircase {
 
     class Program {
 
-        void ShowStaircase (int n) {
+        void ShowStaircase (uint n) {
 
-            for (int i = 1; i <= n; i++) {
+            for (uint i = 1; i <= n; i++) {
 
                 string step = "";
 
                 // Pad spaces to match length of 'n'
-                for (int j = 0; j < n - i; j++) {
+                for (uint j = 0; j < n - i; j++) {
                     step += " ";
                 }
 
                 // Add '#' sign to make the 'steps'
-                for (int j = 0; j < i; j++) {
+                for (uint j = 0; j < i; j++) {
                     step += "#";
                 }
 
@@ -31,7 +31,7 @@ namespace Staircase {
             Console.Write ("Enter a number: ");
             var userInput = Console.ReadLine ();
 
-            prog.ShowStaircase (int.Parse (userInput));
+            prog.ShowStaircase (uint.Parse (userInput));
         }
     }
 }
