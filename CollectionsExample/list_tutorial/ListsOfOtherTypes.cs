@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace list_tutorial {
@@ -31,10 +32,9 @@ namespace list_tutorial {
             // we only need 18 more fibonacci numbers
             for (int i = 0; i < 18; i++) {
 
-                var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
-                var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+                var previousSum = fibonacciNumbers.GetRange (fibonacciNumbers.Count - 2, 2).Sum ();
 
-                fibonacciNumbers.Add (previous + previous2);
+                fibonacciNumbers.Add (previousSum);
             }
 
             foreach (var item in fibonacciNumbers) {
