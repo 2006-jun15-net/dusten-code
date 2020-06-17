@@ -7,14 +7,19 @@ namespace DecimalTest {
             // Whole numbers default to 'int', even if they are small,
             // Because C# is optimized for 32-bit systems ('short' is slower)
             var i = 5;
+            Console.WriteLine (i);
 
             // Real numbers default to 'double' for similar reasons
             var d = 0.5;
+            Console.WriteLine (d);
 
             // You can enforce types using an additional letter at the end
             // of the number
             var f = 0.5f;
             var dec = 0.5m;
+
+            Console.WriteLine (f);
+            Console.WriteLine (dec);
 
             // Decimals are more precise and have a smaller range than 'double's
             // because they store a numerator and a denominator
