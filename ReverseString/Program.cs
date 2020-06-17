@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace ReverseString {
 
@@ -15,6 +16,10 @@ namespace ReverseString {
             return s;
         }
 
+        string BetterReverseString (string input) {
+            return new string (input.Reverse ().ToArray ());
+        }
+
         static void Main (string[] args) {
 
             Console.Write ("Input a string: ");
@@ -22,7 +27,8 @@ namespace ReverseString {
 
             var prog = new Program ();
 
-            Console.WriteLine (prog.ReverseString (userInput));
+            // Console.WriteLine (prog.ReverseString (userInput));
+            Console.WriteLine (prog.BetterReverseString (userInput));
         }
     }
 }
