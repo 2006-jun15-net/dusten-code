@@ -10,6 +10,12 @@ namespace ProtectedExample {
 
         static void Main (string[] args) {
 
+            // Output should be:
+            // 
+            // Circle
+            // Square
+            // Generic Shape
+            // 
             PrintShapeName (new Circle ());
             PrintShapeName (new Square ());
             PrintShapeName (new Shape ());
