@@ -8,12 +8,8 @@ namespace MathFunctions.Library.Functions {
             get => "Exponential";
         }
 
-        public double Call (double x) {
-            return Math.Exp (x);
-        }
+        public double Call (double x) => Math.Exp (x);
 
-        public double Prime (double x) {
-            return Math.Exp (x);
-        }
+        public double Prime (double x) => Math.Exp (x);
     }
 }

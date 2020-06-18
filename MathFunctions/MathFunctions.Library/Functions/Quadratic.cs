@@ -6,12 +6,8 @@ namespace MathFunctions.Library.Functions {
             get => "Quadratic";
         }
 
-        public double Call (double x) {
-            return x * x;
-        }
+        public double Call (double x) => x * x;
 
-        public double Prime (double x) {
-            return 2.0 * x;
-        }
+        public double Prime (double x) => 2.0 * x;
     }
 }

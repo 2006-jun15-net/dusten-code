@@ -16,12 +16,12 @@ namespace MathFunctions.Library.Functions {
             mAlpha = alpha;
         }
 
-        public double Call (double x) {
-            return Math.Pow (1.0 + Math.Exp (-x), -mAlpha);
-        }
+        public double Call (double x) => Math.Pow (1.0 + Math.Exp (-x), -mAlpha);
 
         public double Prime (double x) {
-            return mAlpha * Math.Exp (-x) * Math.Pow (1.0 + Math.Exp (-x), -mAlpha - 1.0);
+
+            var sigmoid = Math.Pow (1.0 + Math.Exp (-x), -mAlpha - 1.0);
+            return mAlpha * Math.Exp (-x) * sigmoid;
         }
     }
 }
