@@ -1,6 +1,6 @@
 using System;
 
-namespace InterfaceExample.App {
+namespace InterfaceExample.Functions {
 
     public class Exponential : IFunction {
 

@@ -1,4 +1,4 @@
-namespace InterfaceExample.App {
+namespace InterfaceExample.Functions {
 
     public class Quadratic : IFunction {
 

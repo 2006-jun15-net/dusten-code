@@ -1,6 +1,6 @@
 ﻿using System;
 
-using InterfaceExample.App;
+using InterfaceExample.Functions;
 
 namespace InterfaceExample {
     class Program {

@@ -1,4 +1,4 @@
-namespace InterfaceExample.App {
+namespace InterfaceExample.Functions {
 
     public interface IFunction {
 
