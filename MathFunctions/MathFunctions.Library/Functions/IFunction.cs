@@ -1,4 +1,4 @@
-namespace InterfaceExample.Functions {
+namespace MathFunctions.Library.Functions {
 
     public interface IFunction {
 

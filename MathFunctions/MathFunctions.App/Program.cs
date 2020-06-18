@@ -1,9 +1,9 @@
 ﻿using System;
 
-using InterfaceExample.Functions;
+using MathFunctions.Library.Functions;
 
-namespace InterfaceExample {
-    
+namespace MathFunctions.App {
+
     class Program {
 
         static void CallFunction (IFunction function, double x) {
