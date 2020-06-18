@@ -4,7 +4,7 @@ using MathFunctions.Library.Functions;
 
 namespace MathFunctions.App {
 
-    class Program {
+    internal class Program {
 
         static void CallFunction (IFunction function, double x) {
             Console.WriteLine ($"{function.Name}({x}) = {function.Call (x)}");
