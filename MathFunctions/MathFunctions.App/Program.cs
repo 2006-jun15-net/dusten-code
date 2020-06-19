@@ -17,7 +17,7 @@ namespace MathFunctions.App {
 
             Console.WriteLine ();
 
-            CallFunction (new Quadratic (), 4.0);
+            CallFunction (new Quadratic (1.0, 2.0, 3.0), 4.0);
             CallFunction (new Exponential (), 2.5);
 
             Console.WriteLine ();
