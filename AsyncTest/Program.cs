@@ -14,7 +14,7 @@ namespace AsyncTest {
         public static void Go () {
 
             GoAsync ();
-            Thread.Sleep (6000);
+            Thread.Sleep (5100);
         }
 
         public static async void GoAsync () {
