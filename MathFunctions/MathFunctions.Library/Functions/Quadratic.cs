@@ -2,9 +2,9 @@ namespace MathFunctions.Library.Functions {
 
     public class Quadratic : IFunction {
 
-        private double mA;
-        private double mB;
-        private double mC;
+        private readonly double mA;
+        private readonly double mB;
+        private readonly double mC;
 
         public string Name {
             get => "Quadratic";

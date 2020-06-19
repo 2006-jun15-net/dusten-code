@@ -4,7 +4,7 @@ namespace MathFunctions.Library.Functions {
 
     public class Logistic : IFunction {
 
-        private double mAlpha;
+        private readonly double mAlpha;
 
         public string Name {
             get => "Logistic[alpha=" + mAlpha + "]";
