@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise 1</title>
+
+	<style>
+		table,
+		th,
+		td {
+			border: 1px solid black;
+		}
+
+		th,
+		td {
+			padding: 5px;
+		}
+
+		input,
+		button {
+			margin: 3px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<img src="template.png" alt="Image Name" height="100" width="300">
+	</header>
+
+	<div>
+		<h1>About</h1>
+		<p>First HTML Exercise</p>
+		<br />
+	</div>
+
+	<div>
+		<h2>Our Locations</h2>
+		<ul>
+			<li>USA
+				<ul>
+					<li><a href="https://www.google.com/search?q=new+york">New York</a></li>
+					<li><a href="https://www.google.com/search?q=columbus+ohio">Columbus</a></li>
+					<li><a href="https://www.google.com/search?q=austin+texas">Austin</a></li>
+					<li><a href="https://www.google.com/search?q=philadelphia">Philly</a></li>
+				</ul>
+			</li>
+
+			<li>World
+				<ul>
+					<li><a href="https://www.google.com/search?q=ottawa">Ottawa</a></li>
+					<li><a href="https://www.google.com/search?q=sydney">Sydney</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div>
+		<h2>Upcoming Classes</h2>
+
+		<table>
+			<tr>
+				<th>Location</th>
+				<th>Topic</th>
+			</tr>
+
+			<tr>
+				<td>New York</td>
+				<td>Javascript & JQuery</td>
+			</tr>
+
+			<tr>
+				<td>San Francisco</td>
+				<td>HTML & CSS</td>
+			</tr>
+		</table>
+	</div>
+
+	<div>
+		<h2>Sign Up!</h2>
+		<span>
+			<label for="name">Name: </label>
+			<input type="text" name="name">
+		</span>
+		<br />
+
+		<span>
+			<label for="email">Email: </label>
+			<input type="text" name="email">
+		</span>
+		<br />
+
+		<span>
+			<label for="location">Location: </label>
+			<select name="location">
+				<option value="San Francisco">San Francisco</option>
+			</select>
+		</span>
+		<br />
+
+		<fieldset>
+			<legend>Gender</legend>
+
+			<span>
+				<label for="male">Male: </label>
+				<input type="radio" id="male" name="gender" value="male">
+
+				<label for="female">Female</label>
+				<input type="radio" id="female" name="gender" value="female">
+			</span>
+		</fieldset>
+
+		<span>Experience:
+			<br />
+			<textarea name="experience" rows="1" cols="20"></textarea>
+		</span>
+		<br />
+
+		<span>
+			<button name="signup">Sign Up</button>
+		</span>
+	</div>
+	<br />
+
+	<footer>
+		<a href="https://twitter.com">Twitter</a>|<a href="https://www.facebook.com">Facebook</a>|<a
+			href="https://www.flickr.com">Flickr</a>
+	</footer>
+</body>
+
+</html>
