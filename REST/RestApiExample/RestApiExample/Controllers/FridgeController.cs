@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using RestApiExample.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using RestApiExample.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,7 +11,7 @@ namespace RestApiExample.Controllers {
     [ApiController]
     public class FridgeController : ControllerBase {
 
-        private static List<FoodItem> mItems = new List<FoodItem> {
+        private static readonly List<FoodItem> mItems = new List<FoodItem> {
 
             new FoodItem {
 
@@ -33,10 +32,17 @@ namespace RestApiExample.Controllers {
                 Id = 3,
                 Name = "Sausage",
                 ExpirationDate = new DateTime (2021, 7, 15)
+            },
+
+            new FoodItem {
+
+                Id = 4,
+                Name = "Leftovers",
+                ExpirationDate = new DateTime (2020, 7, 15)
             }
         };
 
-        [HttpGet("items")]
+        [HttpGet ("items")]
         public IEnumerable<FoodItem> GetItems () {
             return mItems;
         }
@@ -53,8 +59,12 @@ namespace RestApiExample.Controllers {
         }
 
         [HttpPost ("items/clean")]
-        public void PostCleanItems () {
+        public int PostCleanItems () {
+
+            int expired = mItems.Where (f => f.ExpirationDate <= DateTime.Now).Count ();
             mItems.RemoveAll (f => f.ExpirationDate <= DateTime.Now);
+
+            return expired;
         }
 
 
