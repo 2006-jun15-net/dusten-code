@@ -70,13 +70,26 @@ namespace RestApiExample.Controllers {
 
         [HttpPut ("items/{id}")]
         public void PutItem (int id, [FromBody] FoodItem value) {
-            mItems.Where (f => f.Id == id).First ().Name = value.Name;
+            
+            var item = mItems.Where (f => f.Id == id).FirstOrDefault ();
+
+            if (item == default) {
+                // id match failed
+            }
+
+            item.Name = value.Name;
+            item.ExpirationDate = value.ExpirationDate;
         }
 
 
         [HttpDelete ("items/{id}")]
         public void DeleteItem (int id) {
-            mItems.RemoveAll (f => f.Id == id);
+
+            int removed = mItems.RemoveAll (f => f.Id == id);
+
+            if (removed < 1) {
+                // nothing to remove
+            }
         }
     }
 }
