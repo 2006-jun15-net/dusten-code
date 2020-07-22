@@ -1,0 +1,21 @@
+{
+	"name": "cards-demo",
+	"version": "1.0.0",
+	"description": "cards api demo",
+	"main": "index.js",
+	"scripts": {
+		"build": "rm -rf out dist && tsc && webpack && cp src/*.html dist",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Dusten Knull",
+	"license": "ISC",
+	"dependencies": {
+		"@types/jquery": "^3.5.0",
+		"jquery": "^3.5.1"
+	},
+	"devDependencies": {
+		"typescript": "^3.9.7",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.12"
+	}
+}

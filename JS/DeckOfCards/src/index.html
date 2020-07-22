@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Deck of Cards</title>
+	<meta charset="UTF-8">
+
+	<style>
+		.cell-input {
+			max-width: 3em;
+		}
+	</style>
+</head>
+
+<body>
+	<script src="index.bundle.js"></script>
+
+	<span>
+		<button id="new-deck">New</button>
+
+		<button id="draw-card" disabled="">Draw</button>
+		<input class="cell-input" id="draw-amount" type="number" value="1" min="1" max="52" disabled />
+
+		<button id="shuffle-deck">Shuffle</button>
+
+		<label for="remaining">&nbsp;Remaining:&nbsp;</label>
+		<input class="cell-input" type="number" id="remaining" value="0" disabled />
+	</span>
+
+	<div>
+		<p id="deck-id"></p>
+		<img id="card" src="" alt="No card drawn" title="No card drawn" />
+	</div>
+</body>
+
+</html>
