@@ -1,0 +1,10 @@
+$regular-color: black;
+$highlight-color: var(--highlight-color);
+
+.highlighted {
+	color: $regular-color;
+}
+
+.highlighted:hover {
+	color: $highlight-color;
+}

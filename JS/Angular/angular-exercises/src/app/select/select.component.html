@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+
+	<div *ngFor="let button of this.buttons">
+
+		<input type="radio" value="{{button.name}}" name="buttons" formControlName="buttons" />
+		{{ button.name | titlecase }}
+
+		<div *ngIf="button.value" style="margin-left: 2em;">
+			<div class="card" *ngFor="let displayValue of button.displayValues">
+				{{ displayValue }}
+			</div>
+		</div>
+
+	</div>
+
+</form>

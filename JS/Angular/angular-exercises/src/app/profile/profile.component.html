@@ -1,0 +1,14 @@
+<div class="card-container" *ngFor="let user of users; let i = index;">
+
+	<div class="card">
+
+		<div *ngIf="user.visible">
+			<label>Name: </label> {{user.name}}
+			<br />
+			<label>Id: </label> {{user.id}}
+		</div>
+
+		<button (click)="user.visible = !user.visible">{{user.visible ? 'Hide' : 'Show'}}</button>
+
+	</div>
+</div>

@@ -1,0 +1,8 @@
+$card-bg-color: rgb(148, 188, 196);
+$card-ol-color: rgb(83, 109, 131);
+
+@import '../card';
+
+.card {
+	margin: 0.5em 0.1em 0.5em 0.1em;
+}
