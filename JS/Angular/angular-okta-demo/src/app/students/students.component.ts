@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OktaAuthService } from '@okta/okta-angular';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { API_ORIGIN, API_OPTIONS } from '../config';
 
 @Component({
   selector: 'app-students',
@@ -21,32 +22,20 @@ export class StudentsComponent implements OnInit {
 
     const accessToken = await this.oktaAuth.getAccessToken();
 
-    this.http.get("http://localhost:47144/api/student/1", {
-      headers: {
-        Authorization: 'Bearer ' + accessToken
-      },
-      withCredentials: true
-    }).toPromise().then(response =>
-      this.response = JSON.stringify(response)
-    ).catch(error => {
-      this.oktaAuth.loginRedirect('/');
-      // this.response = JSON.stringify(error);
-    });
+    this.http.get(`${API_ORIGIN}/api/student/1`, API_OPTIONS(accessToken))
+      .subscribe(
 
-    /*
-    fetch("http://localhost:47144/api/student/1",
-      {
-        method: "GET",
-        headers: {
-          Authorization: 'Bearer ' + accessToken
-        },
-        credentials: "include"
-      })
-      .then(response => 
-        this.response = JSON.stringify(response)
+        value => this.response = JSON.stringify(value),
+
+        (error: HttpErrorResponse) => {
+
+          if (error.status == 401) {
+
+            // Unauthorized, redirect to login screen
+            this.oktaAuth.loginRedirect('/');
+          }
+          this.response = JSON.stringify(error);
+        }
       )
-      .catch(error => 
-        this.response = JSON.stringify(error)
-      );*/
   }
 }
